@@ -10,11 +10,13 @@ namespace FashionMNIST
     {
         static void Main()
         {
-            FashionMNISTNeuralNetwork.CreateNeuralNetwork(1, 0.1, "network4l.txt");
-            FashionMNISTNeuralNetwork.TestNetworkFromFile("network4l.txt");
-            //FashionMNISTNeuralNetwork.Test2();
+            //FashionMNISTNeuralNetwork.CreateNeuralNetwork(50, 0.1, "network4Bloop50.txt");
+            //FashionMNISTNeuralNetwork.TestNetworkFromFile("network4Bloop50.txt");
+            FashionMNISTNeuralNetwork.CreateAndTestNeuralNetwork(40, 0.1, "_loops_network_784_24_16_16_10.txt");
 
-            Console.ReadKey();
+            Console.ReadLine();
+            Console.WriteLine("Sure?");
+            Console.ReadLine();
         }
     }
 }

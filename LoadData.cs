@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace FashionMNIST
 {
@@ -14,8 +11,6 @@ namespace FashionMNIST
             string[] lines = File.ReadAllLines(fileName);
             data = new List<double[]>();
             labels = new List<double[]>();
-            //data = new double[lines.Length, 784]; // 28x28 wejścia do sieci
-            //labels = new double[lines.Length, 10]; // 10 tyle mozlwieych wyników
             string[] buff;
 
             for (int i = 0; i < lines.Length; i++)
@@ -43,7 +38,7 @@ namespace FashionMNIST
 
                 labels.Add(lb);
                 data.Add(db);
-            }
+            } 
 
             /// normalizacja miejsc od 0 do 783 w każdym wierszu
             for (int i = 0; i < data.Count; i++)
